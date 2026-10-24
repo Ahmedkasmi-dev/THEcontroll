@@ -36,6 +36,8 @@ jobs:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           claude_args: |
-            --model claude-opus-5-5
+            --model claude-opus-5.5
             --allowedTools "Bash,Read,Write,Edit,Glob,Grep,WebFetch,WebSearch"
           trigger_phrase: "@claude"
+        env:
+          ANTHROPIC_BASE_URL: https://alborihi-ai.com/api/public/dev/v1
